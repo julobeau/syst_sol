@@ -24,7 +24,12 @@ function displayProperties(body) {
     }
     document.getElementById("bodySizeValue").innerText = `${body.meanRadius} km`
     document.getElementById("bodyMassValue").innerText = `${body.mass.massValue} 10^${body.mass.massExponent}`
-
+    if(body.avgTemp == 0){
+    document.getElementById("bodyTempValue").innerText = "NA"
+    }
+    else{
+    document.getElementById("bodyTempValue").innerText = `${body.avgTemp} °K ou ${body.avgTemp-265}°C`
+    }
     MoveIn()
 }
 
@@ -34,7 +39,7 @@ async function getBodyData(body, callback) {
         redirect: "follow"
     };
 
-    fetch("https://api.le-systeme-solaire.net/rest/bodies/"+body, requestOptions)
+    fetch(`https://api.le-systeme-solaire.net/rest/bodies/${body}`, requestOptions)
         .then((response) => response.json())
         .then((result) => {
             const data = result
