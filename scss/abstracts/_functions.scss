@@ -1,0 +1,16 @@
+@use "sass:math";
+
+@function random-position() {
+    $number: math.random(99);
+    @return #{$number} + "%";
+}
+
+@function random-rotate(){
+    $degre: math.random(360);
+    @return #{$degre} + "deg";
+}
+
+@function random-blur(){
+    $blur: math.random(3);
+    @return #{$blur} + "px";
+}

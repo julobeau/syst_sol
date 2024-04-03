@@ -1,0 +1,61 @@
+@use "../abstracts/all" as abstracts;
+@use "sass:math";
+
+.systeme{
+    background-color: black;
+    position:relative;
+    overflow: hidden;
+
+    &__planets-container{
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        gap: abstracts.$gap-between-planets;
+        padding-left: calc(50vw - abstracts.$sun-size/2);
+        z-index: 1;
+        position: relative;
+        overflow: scroll;
+        zoom:1;
+
+        &__sun{
+            position: relative;
+
+            &__asteroid-belt{
+                width:abstracts.$asteroid-belt;
+                position:absolute;
+                top:50%;
+                left:50%;
+                translate: -50% -50%;
+                //translate: -(calc(abstracts.$sun-size + abstracts.$mercury-size + abstracts.$venus-size + abstracts.$earth-size + abstracts.$mars-size + abstracts.$gap-between-planets*3)) -50%;
+                //padding-left: calc(50vw - abstracts.$sun-size/2);
+                height: abstracts.$asteroid-belt;
+            }
+        }
+    }
+
+    &__internal-planets{
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: abstracts.$gap-between-planets;
+    }
+    
+    
+    &__external-planets{
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: abstracts.$gap-between-planets;
+    }
+
+    &__stars-container{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        z-index: 0;
+    }
+}
+

@@ -1,0 +1,18 @@
+@use "../abstracts/all" as abstracts;
+@use "sass:math";
+@use "sass:map";
+
+.planet{
+    @each $planet, $list in abstracts.$planets {
+        &--#{$planet}{
+            $planete: map.get($list, 'name');
+            $planet-texture: map.get($list, 'texture');
+            @include abstracts.circle(map.get($list, "size"), map.get($list, "texture"));
+            @if $planet == 'uranus' or $planet == 'saturn'{
+                border-radius: 0;
+            }
+            position: relative;
+            @include abstracts.rotate-around-sun(map.get($list, "distance_sun"), map.get($list, "size"), map.get($list, "vitesse-rotation"));
+        }
+    }
+}

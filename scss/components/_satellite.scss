@@ -1,0 +1,35 @@
+@use "../abstracts/all" as abstracts;
+@use "sass:map";
+
+
+.satellite{
+    background-color: red;
+    width: abstracts.$satellite_size;
+    height: abstracts.$satellite_size;
+    border-radius: 100%;
+    position: absolute;
+    top:0;
+    left:50%;
+    translate: -50% -50%;
+
+
+    &--moon{
+        @extend .satellite;
+        @include abstracts.rotate-around-planet(map.get(map.get(abstracts.$planets, "earth"), "size"));
+        background-color: gray;
+    }
+    
+    &--phobos{
+        @extend .satellite;
+        @include abstracts.rotate-around-planet(map.get(map.get(abstracts.$planets, "mars"), "size"));
+        background-color: white;
+        
+    }
+    
+    &--deimos{
+        @extend .satellite;
+        @include abstracts.rotate-around-planet((map.get(map.get(abstracts.$planets, "mars"), "size")), 7s);
+        background-color: orange;
+    }
+
+}

@@ -1,0 +1,16 @@
+@use "../abstracts/all" as abstracts;
+
+.star{
+    width:15px;
+    height: 15px;
+
+    @for $index from 1 through 17{
+        &:nth-child(#{$index}){
+            position:absolute;
+            top: abstracts.random-position();
+            left: abstracts.random-position();
+            rotate: abstracts.random-rotate();
+            filter: blur(abstracts.random-blur()); 
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@use "./variables" as var;
+@use "sass:math";
+
+@mixin circle($diametre, $url: ""){
+    width: $diametre;
+    height: $diametre;
+    border-radius: 100%;
+    //background-color: $color;
+    background-image: url($url);
+    flex-shrink: 0;
+}
+
+@mixin rotate-around-planet($planet-size, $duration:5s){
+    $center-x: 50%;
+    $center-y: calc(50% + math.div($planet-size, 2));
+    transform-origin: $center-x $center-y;
+    animation: animation-rotate $duration linear infinite;
+}
+
+@mixin rotate-around-sun($distance-to-sun, $planet-size, $duration:5s){
+    $center-x: calc(($distance-to-sun + math.div(var.$sun_size, 2))*-1);
+    $center-y: calc($planet-size / 2);
+    transform-origin: $center-x $center-y;
+    animation: animation-rotate $duration linear infinite;
+}
+
+

@@ -1,0 +1,76 @@
+//variables: taille des planetes
+@use "sass:math";
+@use "sass:map";
+
+$earth-size: 50px;
+$mercury-size: math.round(calc($earth-size/2.6));
+$venus-size: math.round(calc($earth-size/1.1));
+$mars-size: math.round(calc($earth-size/1.9));
+$jupiter-size: math.round(calc($earth-size*3));
+$saturn-size: math.round(calc($earth-size*2.5));
+$uranus-size: math.round(calc($earth-size*2));
+$neptune-size: math.round(calc($earth-size*1.9));
+
+$sun-size: math.round(calc($earth_size*6));
+$satellite_size: 10px;
+$gap-between-planets: 20px;
+$asteroid-belt: (math.div($sun-size, 2) + $mercury-size + $venus-size + $earth-size + $mars-size + $gap-between-planets*6)*2;
+
+$planets:(
+    'mercury':(
+        'name': "mercury",
+        'size': $mercury-size,
+        'distance_sun': $gap-between-planets,
+        'vitesse-rotation': 5s,
+        'texture': "../images/mercury.svg"
+        ),
+    'venus':(
+        'name': "venus",
+        'size': $venus-size,
+        'distance_sun': $gap-between-planets * 2 + $mercury-size,
+        'vitesse-rotation': 7s,
+        'texture': "../images/venus.svg"
+        ),
+    'earth':(
+        "name": "earth",
+        "size": $earth-size,
+        "distance_sun": $gap-between-planets * 3 + $mercury-size + $venus-size,
+        "vitesse-rotation": 10s,
+        "texture": "../images/earth.svg"
+        ),
+    'mars':(
+        "name": "mars",
+        "size": $mars-size,
+        "distance_sun": $gap-between-planets * 4 + $mercury-size + $venus-size + $earth-size,
+        "vitesse-rotation": 12s,
+        "texture": "../images/mars.svg"
+        ),
+    'jupiter':(
+        "name": "jupiter",
+        "size": $jupiter-size,
+        "distance_sun": $gap-between-planets * 5 + $mercury-size + $venus-size + $earth-size + $mars-size ,
+        "vitesse-rotation": 15s,
+        "texture": "../images/jupiter.svg"
+        ),
+    'saturn':(
+        "name": "saturn",
+        "size": $saturn-size,
+        "distance_sun": $gap-between-planets * 6 + $mercury-size + $venus-size + $earth-size + $mars-size + $jupiter-size,
+        "vitesse-rotation": 20s,
+        "texture": "../images/saturn.svg"
+        ),
+    'uranus':(
+        "name": "uranus",
+        "size": $uranus-size,
+        "distance_sun": $gap-between-planets * 7 + $mercury-size + $venus-size + $earth-size + $mars-size + $jupiter-size + $saturn-size,
+        "vitesse-rotation": 25s,
+        "texture": "../images/uranus.svg"
+        ),
+    'neptune':(
+        "name": "neptune",
+        "size": $neptune-size,
+        "distance_sun": $gap-between-planets * 8 + $mercury-size + $venus-size + $earth-size + $mars-size + $jupiter-size + $saturn-size + $uranus-size,
+        "vitesse-rotation": 30s,
+        "texture": "../images/neptune.svg"
+        ),
+);

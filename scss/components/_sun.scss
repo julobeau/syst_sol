@@ -1,0 +1,7 @@
+@use "../abstracts/all" as abstracts;
+
+.systeme__planets-container__sun {
+    $sun-texture: "../images/sun.svg";
+    @include abstracts.circle(abstracts.$sun_size, $sun-texture);
+    border-radius: 0;
+}
