@@ -1,4 +1,7 @@
+@use "../abstracts/fonts" as fonts;
+
 .systeme__informations{
+    font-family: fonts.$font-family-sans-serif;
     position :absolute;
     display: flex;
     flex-direction: column;
@@ -22,6 +25,12 @@
         display:flex;
         align-items: center;
         justify-content: space-between;
+
+        .nomBody{
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: 600;
+        }
     }
 
     &__bodyInfos{

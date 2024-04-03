@@ -61,6 +61,7 @@
 }
 
 .systeme__informations {
+  font-family: "Roboto", sans-serif;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -83,6 +84,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.systeme__informations__header .nomBody {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 600;
 }
 .systeme__informations__bodyInfos {
   display: flex;
@@ -224,120 +230,120 @@
 }
 .star:nth-child(1) {
   position: absolute;
-  top: 80%;
-  left: 80%;
-  rotate: 316deg;
-  filter: blur(2px);
+  top: 27%;
+  left: 38%;
+  rotate: 24deg;
+  filter: blur(3px);
 }
 .star:nth-child(2) {
   position: absolute;
-  top: 9%;
-  left: 68%;
-  rotate: 299deg;
-  filter: blur(1px);
+  top: 86%;
+  left: 10%;
+  rotate: 57deg;
+  filter: blur(3px);
 }
 .star:nth-child(3) {
   position: absolute;
-  top: 59%;
-  left: 3%;
-  rotate: 228deg;
-  filter: blur(2px);
+  top: 15%;
+  left: 91%;
+  rotate: 15deg;
+  filter: blur(3px);
 }
 .star:nth-child(4) {
   position: absolute;
-  top: 85%;
-  left: 71%;
-  rotate: 67deg;
+  top: 13%;
+  left: 6%;
+  rotate: 65deg;
   filter: blur(3px);
 }
 .star:nth-child(5) {
   position: absolute;
-  top: 26%;
-  left: 94%;
-  rotate: 29deg;
-  filter: blur(1px);
+  top: 44%;
+  left: 35%;
+  rotate: 282deg;
+  filter: blur(3px);
 }
 .star:nth-child(6) {
   position: absolute;
-  top: 38%;
-  left: 17%;
-  rotate: 113deg;
-  filter: blur(3px);
+  top: 81%;
+  left: 76%;
+  rotate: 302deg;
+  filter: blur(2px);
 }
 .star:nth-child(7) {
   position: absolute;
-  top: 97%;
-  left: 94%;
-  rotate: 278deg;
-  filter: blur(3px);
+  top: 89%;
+  left: 24%;
+  rotate: 328deg;
+  filter: blur(2px);
 }
 .star:nth-child(8) {
   position: absolute;
-  top: 39%;
-  left: 2%;
-  rotate: 258deg;
-  filter: blur(2px);
+  top: 75%;
+  left: 84%;
+  rotate: 91deg;
+  filter: blur(1px);
 }
 .star:nth-child(9) {
   position: absolute;
-  top: 31%;
-  left: 1%;
-  rotate: 238deg;
-  filter: blur(1px);
+  top: 94%;
+  left: 81%;
+  rotate: 346deg;
+  filter: blur(3px);
 }
 .star:nth-child(10) {
   position: absolute;
-  top: 50%;
-  left: 88%;
-  rotate: 190deg;
-  filter: blur(2px);
+  top: 84%;
+  left: 73%;
+  rotate: 59deg;
+  filter: blur(3px);
 }
 .star:nth-child(11) {
   position: absolute;
-  top: 74%;
-  left: 27%;
-  rotate: 245deg;
-  filter: blur(2px);
+  top: 24%;
+  left: 32%;
+  rotate: 75deg;
+  filter: blur(1px);
 }
 .star:nth-child(12) {
   position: absolute;
-  top: 39%;
-  left: 43%;
-  rotate: 225deg;
+  top: 86%;
+  left: 11%;
+  rotate: 347deg;
   filter: blur(2px);
 }
 .star:nth-child(13) {
   position: absolute;
-  top: 87%;
-  left: 87%;
-  rotate: 185deg;
-  filter: blur(3px);
+  top: 44%;
+  left: 37%;
+  rotate: 137deg;
+  filter: blur(2px);
 }
 .star:nth-child(14) {
   position: absolute;
-  top: 29%;
-  left: 37%;
-  rotate: 185deg;
-  filter: blur(3px);
+  top: 65%;
+  left: 99%;
+  rotate: 354deg;
+  filter: blur(2px);
 }
 .star:nth-child(15) {
   position: absolute;
-  top: 53%;
-  left: 86%;
-  rotate: 42deg;
+  top: 39%;
+  left: 71%;
+  rotate: 212deg;
   filter: blur(1px);
 }
 .star:nth-child(16) {
   position: absolute;
-  top: 37%;
-  left: 46%;
-  rotate: 231deg;
-  filter: blur(2px);
+  top: 15%;
+  left: 71%;
+  rotate: 54deg;
+  filter: blur(3px);
 }
 .star:nth-child(17) {
   position: absolute;
-  top: 34%;
-  left: 9%;
-  rotate: 55deg;
-  filter: blur(1px);
+  top: 76%;
+  left: 83%;
+  rotate: 14deg;
+  filter: blur(2px);
 }/*# sourceMappingURL=main.css.map */
