@@ -4,9 +4,11 @@
 @use "pages/systeme";
 
 @use "layout/informations";
+@use "layout/selectBody";
 
 @use "components/sun";
 @use "components/asteroid-belt";
 @use "components/planet";
 @use "components/satellite";
 @use "components/star";
+@use "components/help";

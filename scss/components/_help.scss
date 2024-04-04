@@ -1,0 +1,5 @@
+@use "../abstracts/all" as abstracts;
+
+.help{
+    @include abstracts.boxInterface(80%, 0, auto);
+}

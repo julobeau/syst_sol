@@ -11,6 +11,6 @@
             left: abstracts.random-position();
             rotate: abstracts.random-rotate();
             filter: blur(abstracts.random-blur()); 
-        }
-    }
+        };
+    };
 }

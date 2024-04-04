@@ -1,21 +1,7 @@
-@use "../abstracts/fonts" as fonts;
+@use "../abstracts/all" as abstracts;
 
 .systeme__informations{
-    font-family: fonts.$font-family-sans-serif;
-    position :absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    left:-450px;
-    top:0;
-    margin-top: 10px;
-    margin-left: 10px;
-    padding:10px;
-    width:30%;
-    height:50%;
-    background-color: rgba(255,255,255,0.5);
-    z-index: 2;
-    border-radius: 10px;
+    @include abstracts.boxInterface(-50%, 0, auto);
     
     &.btn-fermeture{
         cursor: pointer;
@@ -37,5 +23,15 @@
         display:flex;
         align-items: baseline;
         gap:0.5rem;
+
+        &__label{
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+
+    &__lienWiki{
+        color: black;
+
     }
 }

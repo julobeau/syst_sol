@@ -2,3 +2,12 @@
     margin: 0;
     padding: 0;
 }
+
+a{
+    text-decoration: none;
+    color:black;
+
+    &:hover{
+        color:rgb(43, 49, 54);
+    }
+}

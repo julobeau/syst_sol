@@ -2,7 +2,7 @@
 @use "sass:math";
 @use "sass:map";
 
-$earth-size: 50px;
+$earth-size: 2rem;
 $mercury-size: math.round(calc($earth-size/2.6));
 $venus-size: math.round(calc($earth-size/1.1));
 $mars-size: math.round(calc($earth-size/1.9));
@@ -12,8 +12,8 @@ $uranus-size: math.round(calc($earth-size*2));
 $neptune-size: math.round(calc($earth-size*1.9));
 
 $sun-size: math.round(calc($earth_size*6));
-$satellite_size: 10px;
-$gap-between-planets: 20px;
+$satellite_size: 0.5rem;
+$gap-between-planets: 1rem;
 $asteroid-belt: (math.div($sun-size, 2) + $mercury-size + $venus-size + $earth-size + $mars-size + $gap-between-planets*6)*2;
 
 $planets:(

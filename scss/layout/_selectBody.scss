@@ -1,0 +1,9 @@
+@use "../abstracts/all" as abstracts;
+
+.selectBody{
+    @include abstracts.boxInterface(0, 68vh);
+
+    &__body{
+        cursor: pointer;
+    }
+}

@@ -2,7 +2,7 @@
 
 .systeme__planets-container__sun__asteroid-belt {
     @include abstracts.circle(abstracts.$asteroid-belt);
-    background: radial-gradient(circle, rgba(168,168,168,0) 0%, rgba(168,168,168,0) 65%, rgba(172,172,172,1) 67%, rgba(172,172,172,1) 69%, rgba(114,114,114,0) 71%, rgba(0,0,0,0) 100%);
+    background: radial-gradient(circle, rgba(168,168,168,0) 0%, rgba(168,168,168,0) 63%, rgba(172,172,172,1) 65%, rgba(172,172,172,1) 66%, rgba(114,114,114,0) 69%, rgba(0,0,0,0) 100%);
 
     border-radius: 0;
 }

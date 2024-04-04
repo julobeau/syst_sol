@@ -4,7 +4,8 @@ function MoveIn() {
     if(!panneauOuvert){
         let id = null;
         const elem = document.getElementById("systeme__informations");
-        let pos = -450;
+        let width = elem.offsetWidth + 50
+        let pos = -width;
         clearInterval(id);
         id = setInterval(frame, 3);
         function frame() {
@@ -27,11 +28,12 @@ function MoveOut() {
     if(panneauOuvert){
         let id = null;
         const elem = document.getElementById("systeme__informations");
+        let width = elem.offsetWidth + 50
         let pos = 0;
         clearInterval(id);
         id = setInterval(frame, 3);
         function frame() {
-            if (pos == -450) {
+            if (pos == -width) {
             clearInterval(id);
             } else {
             pos--;
@@ -41,6 +43,7 @@ function MoveOut() {
         }
     }
     panneauOuvert = false
+    removeSelectionFX()
 }
 
 document.getElementById("infos-btn-fermeture").addEventListener('click', () => {
