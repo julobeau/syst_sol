@@ -1,9 +1,4 @@
-const divPlanetsList = Array.from(document.querySelectorAll(".planet"))
-
-const textPlanetsList = Array.from(document.querySelectorAll(".systeme__selectBody__body"))
-const textSun = textPlanetsList.shift()
-
-const sun = document.getElementById("soleil")
+const clickableElements = Array.from(document.querySelectorAll("[data-body]"))
 
 const displayInfosFields = {
     'bodyName': document.getElementById("nomBody"),
@@ -21,29 +16,22 @@ let bodySelected = ""
 
 function addSelectionFX(body){
     if(body.dataset.body != "soleil"){
+        console.log(body)
         body.style.filter = "drop-Shadow(0 0 7px red)"
-        for(let planet of textPlanetsList){
-            if(planet.dataset.body == body.id){
-                planet.style.fontWeight = 600
-            }
-        }
+        document.querySelector(`p[data-body=${body.dataset.body}]`).style.fontWeight = 600
     }
     else{
-        textSun.style.fontWeight = 600
+        document.querySelector(`p[data-body=${body.dataset.body}]`).style.fontWeight = 600
     }
 }
 
 function removeSelectionFX() {
     if(bodySelected != "" && bodySelected.dataset.body != "soleil"){
         bodySelected.style.filter = ""
-        for (let planet of textPlanetsList){
-            if(planet.dataset.body == bodySelected.id){
-                planet.style.fontWeight = 400
-            }
-        }
+        document.querySelector(`p[data-body=${bodySelected.dataset.body}]`).style.fontWeight = 400
     }
     else if(bodySelected != "" && bodySelected.dataset.body == "soleil"){
-        textSun.style.fontWeight = 400
+        document.querySelector(`p[data-body=${bodySelected.dataset.body}]`).style.fontWeight = 400
     }
 }
 
@@ -107,9 +95,6 @@ function addClickBody(element) {
     })
 }
 
-for(let i = 0; i <= divPlanetsList.length-1; i++){
-    addClickBody(divPlanetsList[i])
-    addClickBody(textPlanetsList[i])
+for(let element of clickableElements){
+    addClickBody(element)
 }
-addClickBody(sun)
-addClickBody(textSun)
