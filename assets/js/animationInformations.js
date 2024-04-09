@@ -7,12 +7,12 @@ function MoveIn() {
         let width = elem.offsetWidth + 50
         let pos = -width;
         clearInterval(id);
-        id = setInterval(frame, 3);
+        id = setInterval(frame, 0);
         function frame() {
-            if (pos == 0) {
+            if (pos >= 0) {
             clearInterval(id);
             } else {
-            pos++;
+            pos += 2;
             //elem.style.top = pos + 'px';
             elem.style.left = pos + 'px';
             }
@@ -31,12 +31,12 @@ function MoveOut() {
         let width = elem.offsetWidth + 50
         let pos = 0;
         clearInterval(id);
-        id = setInterval(frame, 3);
+        id = setInterval(frame, 0);
         function frame() {
-            if (pos == -width) {
+            if (pos <= -width) {
             clearInterval(id);
             } else {
-            pos--;
+            pos -= 2;
             //elem.style.top = pos + 'px';
             elem.style.left = pos + 'px';
             }

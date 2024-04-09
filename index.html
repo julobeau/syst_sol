@@ -12,12 +12,12 @@
     <script type="module">
         import {panzoom} from './assets/js/panzoom.js'
         document.addEventListener("DOMContentLoaded", (e) => {
-            panzoom('#systeme__planets-container', {bound:'none'})
+            panzoom('#systeme__planetsContainer', {bound:'none'})
         })
     </script>
 </head>
 <body class="systeme">
-    <div class="systeme__stars-container">
+    <div class="systeme__starsContainer">
         <img class="star" src="assets/images/star.svg" alt="etoiles">
         <img class="star" src="assets/images/star.svg" alt="etoiles">
         <img class="star" src="assets/images/star.svg" alt="etoiles">
@@ -38,81 +38,81 @@
     </div>
 
     <div class="help">
-        <div>Mouse wheel to zoom</div>
-        <div>click and drag to pan</div>
+        <p>Mouse wheel to zoom</p>
+        <p>click and drag to pan</p>
     </div>
     <div class="systeme__informations" id="systeme__informations">
         <div class="systeme__informations__header">
-            <div class="nomBody" id="nomBody">Nom</div>
+            <h1 class="nomBody" id="nomBody">Nom</h1>
             <div class="btn-fermeture" id="infos-btn-fermeture"><i class="bi bi-x-lg"></i></div>
         </div>
-        <div class="systeme__informations__bodyInfos typeBody" id="typeBody">
-            <div class="systeme__informations__bodyInfos__label bodyType__label">Type :</div>
-            <div class="bodyType__value" id="bodyTypeValue">Type</div>
+        <div class="systeme__informations__bodyInfos" id="typeBody">
+            <h2 class="systeme__informations__bodyInfos__label">Type :</h2>
+            <p class="bodyType__value" id="bodyTypeValue">Type</p>
         </div>
-        <div class="systeme__informations__bodyInfos bodySize">
-            <div class="systeme__informations__bodyInfos__label label bodySize__label">Rayon moyen :</div>
-            <div class="bodySize__value" id="bodySizeValue">taille</div>
+        <div class="systeme__informations__bodyInfos">
+            <h2 class="systeme__informations__bodyInfos__label ">Rayon moyen :</h2>
+            <p class="bodySize__value" id="bodySizeValue">taille</p>
         </div>
-        <div class="systeme__informations__bodyInfos bodyMass">
-            <div class="systeme__informations__bodyInfos__label label bodyMass__label">Masse :</div>
-            <div class="bodyMass__value" id="bodyMassValue">masse</div>
+        <div class="systeme__informations__bodyInfos">
+            <h2 class="systeme__informations__bodyInfos__label">Masse :</h2>
+            <p class="bodyMass__value" id="bodyMassValue">masse</p>
         </div>
-        <div class="systeme__informations__bodyInfos bodyTemp">
-            <div class="systeme__informations__bodyInfos__label label bodyTemp__label">Température moyenne :</div>
-            <div class="bodyTemp__value" id="bodyTempValue">température</div>
+        <div class="systeme__informations__bodyInfos">
+            <h2 class="systeme__informations__bodyInfos__label">Température moyenne :</h2>
+            <p class="bodyTemp__value" id="bodyTempValue">température</p>
         </div>
-        <div class="systeme__informations__bodyInfos distSoleil">
-            <div class="systeme__informations__bodyInfos__label label bodyDist__label">Distance du soleil :</div>
-            <div class="bodyDist__value" id="bodyDistValue">distance</div>
+        <div class="systeme__informations__bodyInfos">
+            <h2 class="systeme__informations__bodyInfos__label">Distance du soleil :</h2>
+            <p class="bodyDist__value" id="bodyDistValue">distance</p>
         </div>
-        <div class="systeme__informations__bodyInfos orbitTime">
-            <div class="systeme__informations__bodyInfos__label label bodyOrbitTime__label">Orbite sidérale :</div>
-            <div class="bodyOrbitTime__value" id="bodyOrbitTimeValue">temps orbite</div>
+        <div class="systeme__informations__bodyInfos">
+            <h2 class="systeme__informations__bodyInfos__label">Orbite sidérale :</h2>
+            <p class="bodyOrbitTime__value" id="bodyOrbitTimeValue">temps orbite</p>
         </div>
-        <div class="systeme__informations__bodyInfos satellitesCount">
-            <div class="systeme__informations__bodyInfos__label label bodySatellitesCount__label">Nombre de satellites connus :</div>
-            <div class="bodySatellitesCount__value" id="bodySatellitesCountValue">nb satellites</div>
+        <div class="systeme__informations__bodyInfos">
+            <h2 class="systeme__informations__bodyInfos__label">Nombre de satellites connus :</h2>
+            <p class="bodySatellitesCount__value" id="bodySatellitesCountValue">nb satellites</p>
         </div>
-        <div class="systeme__informations__lienWiki" id="lienWiki"><a href="https://fr.wikipedia.org/wiki/Soleil" target="blank">En savoir plus</a></div>
+        <div class="systeme__informations__bodyInfos lienWiki" id="lienWiki"><a href="https://fr.wikipedia.org/wiki/Soleil" target="blank">En savoir plus</a></div>
     </div>
 
-    <div class="selectBody">
-        <div class="selectBody__body selectBody__sun" data-body="soleil">Soleil</div>
-        <div class="selectBody__body selectBody__sun" data-body="mercure">Mercure</div>
-        <div class="selectBody__body selectBody__sun" data-body="venus">Vénus</div>
-        <div class="selectBody__body selectBody__sun" data-body="terre">Terre</div>
-        <div class="selectBody__body selectBody__sun" data-body="mars">Mars</div>
-        <div class="selectBody__body selectBody__sun" data-body="jupiter">Jupiter</div>
-        <div class="selectBody__body selectBody__sun" data-body="saturne">Saturne</div>
-        <div class="selectBody__body selectBody__sun" data-body="neptune">Neptune</div>
-        <div class="selectBody__body selectBody__sun" data-body="uranus">Uranus</div>
+    <div class="systeme__selectBody">
+        <p class="systeme__selectBody__body" data-body="soleil">Soleil</p>
+        <p class="systeme__selectBody__body" data-body="mercure">Mercure</p>
+        <p class="systeme__selectBody__body" data-body="venus">Vénus</p>
+        <p class="systeme__selectBody__body" data-body="terre">Terre</p>
+        <p class="systeme__selectBody__body" data-body="mars">Mars</p>
+        <p class="systeme__selectBody__body" data-body="jupiter">Jupiter</p>
+        <p class="systeme__selectBody__body" data-body="saturne">Saturne</p>
+        <p class="systeme__selectBody__body" data-body="uranus">Uranus</p>
+        <p class="systeme__selectBody__body" data-body="neptune">Neptune</p>
     </div>
 
-    <div class="systeme__planets-container" id="systeme__planets-container">
-        <div class="systeme__planets-container__sun" id="soleil" data-body="soleil">
-            <div class="systeme__planets-container__sun__asteroid-belt" id="asteroidBelt"></div>
+    <div class="systeme__planetsContainer" id="systeme__planetsContainer">
+        <div class="systeme__planetsContainer__sun" id="soleil" data-body="soleil">
+            <div class="systeme__planetsContainer__sun__asteroidBelt" id="asteroidBelt"></div>
         </div>
-        <div class="systeme__internal-planets">
-            <div class="planet planet--mercury" id="mercure" data-body="mercure"></div>
-            <div class="planet planet--venus" id="venus" data-body="venus"></div>
-            <div class="planet planet--earth" id="terre" data-body="terre">
-                <div class="satellite--moon"></div>
+        <div class="systeme__internalPlanets">
+            <div class="planet planetMercury" id="mercure" data-body="mercure"></div>
+            <div class="planet planetVenus" id="venus" data-body="venus"></div>
+            <div class="planet planetEarth" id="terre" data-body="terre">
+                <div class="satelliteMoon"></div>
             </div>
-            <div class="planet planet--mars" id="mars" data-body="mars">
-                <div class="satellite--phobos"></div>
-                <div class="satellite--deimos"></div>
+            <div class="planet planetMars" id="mars" data-body="mars">
+                <div class="satellitePhobos"></div>
+                <div class="satelliteDeimos"></div>
             </div>
         </div>
-        <div class="systeme__external-planets">
-            <div class="planet planet--jupiter" id="jupiter" data-body="jupiter"></div>
-            <div class="planet planet--saturn" id="saturne" data-body="saturne"></div>
-            <div class="planet planet--uranus" id="uranus" data-body="uranus"></div>
-            <div class="planet planet--neptune" id="neptune" data-body="neptune"></div>
+        <div class="systeme__externalPlanets">
+            <div class="planet planetJupiter" id="jupiter" data-body="jupiter"></div>
+            <div class="planet planetSaturn" id="saturne" data-body="saturne"></div>
+            <div class="planet planetUranus" id="uranus" data-body="uranus"></div>
+            <div class="planet planetNeptune" id="neptune" data-body="neptune"></div>
         </div>    
     </div>    
 
-    <script src="./assets/js/test.js"></script>
+    <script src="./assets/js/script.js"></script>
     <script src="./assets/js/animationInformations.js"></script>
 </body>
 </html>

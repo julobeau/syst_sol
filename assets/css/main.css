@@ -26,20 +26,20 @@ a:hover {
   position: relative;
   overflow: hidden;
 }
-.systeme__planets-container {
+.systeme__planetsContainer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 1080px;
-  width: 1920px;
+  height: 100vh;
+  width: 100%;
   gap: 1rem;
   padding-left: calc(50vw - 6rem);
   z-index: 1;
 }
-.systeme__planets-container__sun {
+.systeme__planetsContainer__sun {
   position: relative;
 }
-.systeme__planets-container__sun__asteroid-belt {
+.systeme__planetsContainer__sun__asteroidBelt {
   width: 36rem;
   position: absolute;
   top: 50%;
@@ -47,19 +47,19 @@ a:hover {
   translate: -50% -50%;
   height: 36rem;
 }
-.systeme__internal-planets {
+.systeme__internalPlanets {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
-.systeme__external-planets {
+.systeme__externalPlanets {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
 }
-.systeme__stars-container {
+.systeme__starsContainer {
   position: absolute;
   top: 0;
   left: 0;
@@ -110,7 +110,7 @@ a:hover {
   color: black;
 }
 
-.selectBody {
+.systeme__selectBody {
   font-family: "Roboto", sans-serif;
   position: absolute;
   display: flex;
@@ -125,12 +125,17 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 2;
   border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
 }
-.selectBody__body {
+.systeme__selectBody__body {
   cursor: pointer;
 }
+.systeme__selectBody__body:hover {
+  color: rgba(212, 111, 111, 0.855);
+}
 
-.systeme__planets-container__sun {
+.systeme__planetsContainer__sun {
   width: 12rem;
   height: 12rem;
   border-radius: 100%;
@@ -139,7 +144,7 @@ a:hover {
   border-radius: 0;
 }
 
-.systeme__planets-container__sun__asteroid-belt {
+.systeme__planetsContainer__sun__asteroidBelt {
   width: 36rem;
   height: 36rem;
   border-radius: 100%;
@@ -149,7 +154,7 @@ a:hover {
   border-radius: 0;
 }
 
-.planet--mercury {
+.planetMercury {
   cursor: pointer;
   width: 1rem;
   height: 1rem;
@@ -160,7 +165,7 @@ a:hover {
   transform-origin: -7rem 0.5rem;
   animation: animation-rotate 5s linear infinite;
 }
-.planet--venus {
+.planetVenus {
   cursor: pointer;
   width: 2rem;
   height: 2rem;
@@ -171,7 +176,7 @@ a:hover {
   transform-origin: -9rem 1rem;
   animation: animation-rotate 7s linear infinite;
 }
-.planet--earth {
+.planetEarth {
   cursor: pointer;
   width: 2rem;
   height: 2rem;
@@ -182,7 +187,7 @@ a:hover {
   transform-origin: -12rem 1rem;
   animation: animation-rotate 10s linear infinite;
 }
-.planet--mars {
+.planetMars {
   cursor: pointer;
   width: 1rem;
   height: 1rem;
@@ -193,7 +198,7 @@ a:hover {
   transform-origin: -15rem 0.5rem;
   animation: animation-rotate 12s linear infinite;
 }
-.planet--jupiter {
+.planetJupiter {
   cursor: pointer;
   width: 6rem;
   height: 6rem;
@@ -204,7 +209,7 @@ a:hover {
   transform-origin: -17rem 3rem;
   animation: animation-rotate 15s linear infinite;
 }
-.planet--saturn {
+.planetSaturn {
   cursor: pointer;
   width: 5rem;
   height: 5rem;
@@ -216,7 +221,7 @@ a:hover {
   transform-origin: -24rem 2.5rem;
   animation: animation-rotate 20s linear infinite;
 }
-.planet--uranus {
+.planetUranus {
   cursor: pointer;
   width: 4rem;
   height: 4rem;
@@ -228,7 +233,7 @@ a:hover {
   transform-origin: -30rem 2rem;
   animation: animation-rotate 25s linear infinite;
 }
-.planet--neptune {
+.planetNeptune {
   cursor: pointer;
   width: 4rem;
   height: 4rem;
@@ -240,7 +245,7 @@ a:hover {
   animation: animation-rotate 30s linear infinite;
 }
 
-.satellite, .satellite--deimos, .satellite--phobos, .satellite--moon {
+.satellite, .satelliteDeimos, .satellitePhobos, .satelliteMoon {
   background-color: red;
   width: 0.5rem;
   height: 0.5rem;
@@ -250,17 +255,17 @@ a:hover {
   left: 50%;
   translate: -50% -50%;
 }
-.satellite--moon {
+.satelliteMoon {
   transform-origin: 50% calc(50% + 1rem);
   animation: animation-rotate 5s linear infinite;
   background-color: gray;
 }
-.satellite--phobos {
+.satellitePhobos {
   transform-origin: 50% calc(50% + 0.5rem);
   animation: animation-rotate 5s linear infinite;
   background-color: white;
 }
-.satellite--deimos {
+.satelliteDeimos {
   transform-origin: 50% calc(50% + 0.5rem);
   animation: animation-rotate 7s linear infinite;
   background-color: orange;
@@ -272,121 +277,121 @@ a:hover {
 }
 .star:nth-child(1) {
   position: absolute;
-  top: 22%;
-  left: 50%;
-  rotate: 197deg;
+  top: 27%;
+  left: 78%;
+  rotate: 138deg;
   filter: blur(2px);
 }
 .star:nth-child(2) {
   position: absolute;
-  top: 74%;
-  left: 49%;
-  rotate: 108deg;
-  filter: blur(1px);
+  top: 17%;
+  left: 10%;
+  rotate: 50deg;
+  filter: blur(3px);
 }
 .star:nth-child(3) {
   position: absolute;
-  top: 63%;
-  left: 88%;
-  rotate: 166deg;
-  filter: blur(2px);
+  top: 56%;
+  left: 74%;
+  rotate: 286deg;
+  filter: blur(3px);
 }
 .star:nth-child(4) {
   position: absolute;
-  top: 97%;
-  left: 73%;
-  rotate: 273deg;
-  filter: blur(1px);
+  top: 84%;
+  left: 34%;
+  rotate: 78deg;
+  filter: blur(3px);
 }
 .star:nth-child(5) {
   position: absolute;
-  top: 41%;
-  left: 80%;
-  rotate: 148deg;
+  top: 56%;
+  left: 15%;
+  rotate: 125deg;
   filter: blur(1px);
 }
 .star:nth-child(6) {
   position: absolute;
-  top: 16%;
-  left: 17%;
-  rotate: 321deg;
-  filter: blur(1px);
+  top: 79%;
+  left: 58%;
+  rotate: 181deg;
+  filter: blur(3px);
 }
 .star:nth-child(7) {
   position: absolute;
-  top: 28%;
-  left: 9%;
-  rotate: 79deg;
+  top: 75%;
+  left: 3%;
+  rotate: 259deg;
   filter: blur(3px);
 }
 .star:nth-child(8) {
   position: absolute;
-  top: 24%;
-  left: 3%;
-  rotate: 194deg;
-  filter: blur(3px);
+  top: 87%;
+  left: 52%;
+  rotate: 302deg;
+  filter: blur(2px);
 }
 .star:nth-child(9) {
   position: absolute;
-  top: 80%;
-  left: 65%;
-  rotate: 191deg;
-  filter: blur(1px);
+  top: 25%;
+  left: 80%;
+  rotate: 277deg;
+  filter: blur(3px);
 }
 .star:nth-child(10) {
   position: absolute;
-  top: 18%;
-  left: 57%;
-  rotate: 219deg;
+  top: 64%;
+  left: 68%;
+  rotate: 265deg;
   filter: blur(3px);
 }
 .star:nth-child(11) {
   position: absolute;
-  top: 71%;
-  left: 51%;
-  rotate: 285deg;
+  top: 52%;
+  left: 34%;
+  rotate: 298deg;
   filter: blur(3px);
 }
 .star:nth-child(12) {
   position: absolute;
-  top: 81%;
-  left: 57%;
-  rotate: 146deg;
+  top: 82%;
+  left: 1%;
+  rotate: 238deg;
   filter: blur(1px);
 }
 .star:nth-child(13) {
   position: absolute;
-  top: 27%;
-  left: 29%;
-  rotate: 58deg;
-  filter: blur(2px);
+  top: 56%;
+  left: 28%;
+  rotate: 318deg;
+  filter: blur(3px);
 }
 .star:nth-child(14) {
   position: absolute;
-  top: 81%;
-  left: 17%;
-  rotate: 233deg;
+  top: 58%;
+  left: 50%;
+  rotate: 281deg;
   filter: blur(1px);
 }
 .star:nth-child(15) {
   position: absolute;
-  top: 38%;
-  left: 73%;
-  rotate: 111deg;
+  top: 58%;
+  left: 17%;
+  rotate: 76deg;
   filter: blur(1px);
 }
 .star:nth-child(16) {
   position: absolute;
-  top: 63%;
-  left: 38%;
-  rotate: 232deg;
-  filter: blur(1px);
+  top: 87%;
+  left: 63%;
+  rotate: 28deg;
+  filter: blur(3px);
 }
 .star:nth-child(17) {
   position: absolute;
-  top: 11%;
-  left: 11%;
-  rotate: 76deg;
+  top: 78%;
+  left: 37%;
+  rotate: 296deg;
   filter: blur(2px);
 }
 

@@ -1,6 +1,6 @@
 @use "../abstracts/all" as abstracts;
 
-.systeme__planets-container__sun__asteroid-belt {
+.systeme__planetsContainer__sun__asteroidBelt {
     @include abstracts.circle(abstracts.$asteroid-belt);
     background: radial-gradient(circle, rgba(168,168,168,0) 0%, rgba(168,168,168,0) 63%, rgba(172,172,172,1) 65%, rgba(172,172,172,1) 66%, rgba(114,114,114,0) 69%, rgba(0,0,0,0) 100%);
 

@@ -8,12 +8,12 @@
     position:relative;
     overflow: hidden;
 
-    &__planets-container{
+    &__planetsContainer{
         display:flex;
         justify-content: flex-start;
         align-items: center;
-        height: 1080px;
-        width: 1920px;
+        height: 100vh;
+        width: 100%;
         gap: abstracts.$gap-between-planets;
         padding-left: calc(50vw - abstracts.$sun-size/2);
         z-index: 1;
@@ -21,7 +21,7 @@
         &__sun{
             position: relative;
 
-            &__asteroid-belt{
+            &__asteroidBelt{
                 width:abstracts.$asteroid-belt;
                 position:absolute;
                 top:50%;
@@ -32,7 +32,7 @@
         }
     }
 
-    &__internal-planets{
+    &__internalPlanets{
         display:flex;
         justify-content: flex-start;
         align-items: center;
@@ -40,14 +40,14 @@
     }
     
     
-    &__external-planets{
+    &__externalPlanets{
         display:flex;
         justify-content: flex-end;
         align-items: center;
         gap: abstracts.$gap-between-planets;
     }
 
-    &__stars-container{
+    &__starsContainer{
         position:absolute;
         top:0;
         left:0;

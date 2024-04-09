@@ -1,9 +1,15 @@
 @use "../abstracts/all" as abstracts;
 
-.selectBody{
+.systeme__selectBody{
     @include abstracts.boxInterface(0, 68vh);
+    background-color: rgba(0,0,0,0);
+    color: white;
 
     &__body{
         cursor: pointer;
+
+        &:hover{
+            color: rgba(212, 111, 111, 0.855);
+        }
     }
 }

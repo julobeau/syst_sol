@@ -17,56 +17,56 @@ $gap-between-planets: 1rem;
 $asteroid-belt: (math.div($sun-size, 2) + $mercury-size + $venus-size + $earth-size + $mars-size + $gap-between-planets*6)*2;
 
 $planets:(
-    'mercury':(
+    'Mercury':(
         'name': "mercury",
         'size': $mercury-size,
         'distance_sun': $gap-between-planets,
         'vitesse-rotation': 5s,
         'texture': "../images/mercury.svg"
         ),
-    'venus':(
+    'Venus':(
         'name': "venus",
         'size': $venus-size,
         'distance_sun': $gap-between-planets * 2 + $mercury-size,
         'vitesse-rotation': 7s,
         'texture': "../images/venus.svg"
         ),
-    'earth':(
+    'Earth':(
         "name": "earth",
         "size": $earth-size,
         "distance_sun": $gap-between-planets * 3 + $mercury-size + $venus-size,
         "vitesse-rotation": 10s,
         "texture": "../images/earth.svg"
         ),
-    'mars':(
+    'Mars':(
         "name": "mars",
         "size": $mars-size,
         "distance_sun": $gap-between-planets * 4 + $mercury-size + $venus-size + $earth-size,
         "vitesse-rotation": 12s,
         "texture": "../images/mars.svg"
         ),
-    'jupiter':(
+    'Jupiter':(
         "name": "jupiter",
         "size": $jupiter-size,
         "distance_sun": $gap-between-planets * 5 + $mercury-size + $venus-size + $earth-size + $mars-size ,
         "vitesse-rotation": 15s,
         "texture": "../images/jupiter.svg"
         ),
-    'saturn':(
+    'Saturn':(
         "name": "saturn",
         "size": $saturn-size,
         "distance_sun": $gap-between-planets * 6 + $mercury-size + $venus-size + $earth-size + $mars-size + $jupiter-size,
         "vitesse-rotation": 20s,
         "texture": "../images/saturn.svg"
         ),
-    'uranus':(
+    'Uranus':(
         "name": "uranus",
         "size": $uranus-size,
         "distance_sun": $gap-between-planets * 7 + $mercury-size + $venus-size + $earth-size + $mars-size + $jupiter-size + $saturn-size,
         "vitesse-rotation": 25s,
         "texture": "../images/uranus.svg"
         ),
-    'neptune':(
+    'Neptune':(
         "name": "neptune",
         "size": $neptune-size,
         "distance_sun": $gap-between-planets * 8 + $mercury-size + $venus-size + $earth-size + $mars-size + $jupiter-size + $saturn-size + $uranus-size,

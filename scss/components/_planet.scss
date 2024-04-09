@@ -4,12 +4,12 @@
 
 .planet{
     @each $planet, $list in abstracts.$planets {
-        &--#{$planet}{
+        &#{$planet}{
             cursor: pointer;
             $planete: map.get($list, 'name');
             $planet-texture: map.get($list, 'texture');
             @include abstracts.circle(map.get($list, "size"), map.get($list, "texture"));
-            @if $planet == 'uranus' or $planet == 'saturn'{
+            @if $planet == 'Uranus' or $planet == 'Saturn'{
                 border-radius: 0;
             }
             position: relative;
